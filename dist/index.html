@@ -10,8 +10,23 @@
     <link rel="stylesheet" href="styles/css/main.css">
   </head>
   <body>
-    <header class="main-header">
-      <div class="grid grid--container"><a class="logo" href=""><img src="./img/logo.svg" alt=""></a></div>
+    <header class="main-header"><a class="logo" href=""><img src="./img/logo.svg" alt=""></a>
+      <div class="phone">
+        <div class="phone__icon"></div>
+        <div class="phone__number">8 800 555-35-35</div><a class="callback" href="">Заказать звонок</a>
+      </div>
+    </header>
+    <header class="nav">
+      <div class="grid grid--container">
+        <div class="nav__container">
+          <li class="nav__link"><a href="">Услуги</a></li>
+          <li class="nav__link"><a href="">Цены</a></li>
+          <li class="nav__link"><a href="">Тест</a></li>
+          <li class="nav__link"><a href="">Для кого</a></li>
+          <li class="nav__link"><a href="">Обо мне</a></li>
+          <li class="nav__link"><a href="">Контакты</a></li>
+        </div>
+      </div>
     </header>
     <div class="hero">
       <div class="hero__align">
@@ -36,27 +51,42 @@
         <h2 class="h2">Для кого подойдут занятия с репетитором?</h2>
       </div>
     </section>
-    <section class="section for-who">
+    <section class="section about">
+      <div class="about__img anim-slide"></div>
       <div class="grid grid--container">
-        <h2 class="h2">Немного обо мне</h2>
+        <div class="row">
+          <div class="col col--lg-7 col--lg-offset-5">
+            <h2 class="h2">Немного обо мне</h2>
+            <div class="row">
+              <div class="col col--lg-6">
+                <p>В специальных нормах, посвященных данному вопросу, указывается, что неустойка гарантирует объект права. Субъект наследует предпринимательский риск.</p>
+                <p>Аккредитив, как неоднократно наблюдалось при чрезмерном вмешательстве государства в данные правоотношения, устанавливает платежный документ, учитывая недостаточную теоретическую проработанность этой отрасли права. Субаренда возмещает страховой полис. Акционерное общество возмещает страховой полис.</p>
+              </div>
+              <div class="col col--lg-6">
+                <p>Презумпция косвенно экспортирует индоссамент. Рефинансирование принудительно изъято. Оферта защищает коносамент.</p>
+                <p>Отстаете по школьной программе? Пропустили много уроков и снизилась успеваемость?</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="section for-who">
+    <section class="section">
       <div class="grid grid--container">
         <h2 class="h2">Мои услуги</h2>
       </div>
     </section>
-    <section class="section for-who">
+    <section class="section">
       <div class="grid grid--container">
         <h2 class="h2">А ты готов к экзамену?</h2>
       </div>
     </section>
-    <section class="section for-who">
+    <section class="section">
       <div class="grid grid--container">
         <h2 class="h2">Отзывы довольных клиентов</h2>
       </div>
     </section>
-    <section class="section for-who">
+    <section class="section">
       <div class="grid grid--container">
         <h2 class="h2">Инстаграм</h2>
       </div>
@@ -66,5 +96,11 @@
         <p>this is footer</p>
       </div>
     </footer>
+    <script src="./js/TweenMax.min.js"></script>
+    <script src="./js/jquery-2.2.1.min.js"></script>
+    <script src="./js/ScrollMagic.min.js"></script>
+    <script src="./js/animation.gsap.min.js"></script>
+    <script src="./js/SmoothScroll.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

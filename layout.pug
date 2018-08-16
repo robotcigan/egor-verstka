@@ -11,9 +11,27 @@ html(lang="ru")
   body
 
     header.main-header
+      a(href="").logo
+        img(src="./img/logo.svg", alt="")
+      .phone
+        .phone__icon
+        .phone__number 8 800 555-35-35
+        a(href="").callback Заказать звонок
+    header.nav
       .grid.grid--container
-        a(href="").logo
-          img(src="./img/logo.svg", alt="")
+        .nav__container
+          li.nav__link
+            a(href="") Услуги
+          li.nav__link
+            a(href="") Цены
+          li.nav__link
+            a(href="") Тест
+          li.nav__link
+            a(href="") Для кого
+          li.nav__link
+            a(href="") Обо мне
+          li.nav__link
+            a(href="") Контакты
 
     block content
 
@@ -22,9 +40,10 @@ html(lang="ru")
       .grid.grid--container
         p this is footer
     
-    //- script(src="./js/TweenMax.min.js")
-    //- script(src="./js/jquery-2.2.1.min.js")
+    script(src="./js/TweenMax.min.js")
+    script(src="./js/jquery-2.2.1.min.js")
     //- script(src="./js/tilt.jquery.min.js")
-    //- script(src="./js/ScrollMagic.min.js")
-    //- script(src="./js/animation.gsap.min.js")
-    //- script(src="./js/main.js")
+    script(src="./js/ScrollMagic.min.js")
+    script(src="./js/animation.gsap.min.js")
+    script(src="./js/SmoothScroll.js")
+    script(src="./js/main.js")

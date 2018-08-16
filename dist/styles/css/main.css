@@ -546,6 +546,18 @@ p {
 .uppercase {
   text-transform: uppercase;
 }
+.anim-slide {
+  position: relative;
+}
+.anim-slide__box {
+  background-color: #fff;
+  content: '';
+  height: 100%;
+  right: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 .modal {
   animation: bigFadeUp 0.3s forwards ease;
   background: #fff;
@@ -909,9 +921,30 @@ p {
   }
 }
 .main-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 5rem;
   position: fixed;
-  padding-top: 6rem;
+  top: 6rem;
   width: 100%;
+  z-index: 100;
+}
+.nav {
+  position: fixed;
+  top: 6rem;
+  width: 100%;
+  z-index: 100;
+}
+.nav__container {
+  display: -ms-flexbox;
+  display: flex;
+}
+.nav__link {
+  display: block;
+  margin-right: 4.8rem;
+  list-style-type: none;
 }
 .hero {
   -ms-flex-align: center;
@@ -935,6 +968,7 @@ p {
   justify-content: space-between;
 }
 .hero__text {
+  max-width: 55rem;
   width: 50%;
 }
 .hero__text ul {
@@ -957,8 +991,16 @@ p {
 .section {
   margin-bottom: 15rem;
 }
+.about__img {
+  background: url("../../img/about.jpg") no-repeat center;
+  background-size: cover;
+  height: 60rem;
+  left: 0;
+  position: absolute;
+  width: 36.84210526315789%;
+}
 .grid--container {
-  max-width: 1171px;
+  max-width: 1220px;
 }
 @media (max-width: 1200px) {
   body.body--cursor-pointer {
