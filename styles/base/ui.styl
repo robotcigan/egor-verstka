@@ -1,5 +1,4 @@
 .btn
-  background $primary
   border 0
   color #fff
   cursor pointer
@@ -14,46 +13,19 @@
   padding 1.7rem 2.4rem
   text-decoration none
   transition all .4s
-  &__icon
-    display inline-block
-    line-height 1 !important
-    margin-bottom 0 !important
-    margin-right -1rem
-    margin-top -.3rem
-    vertical-align middle
-    .fa
-      font-weight 600
-      line-height 1
-      margin 0
-  &__icon + span
-    display inline-block
-    margin-left 2rem
-    vertical-align middle
-    transform translateY(-3px)
-  &:hover
-    background-color $primary - 15%
-  &--solid
-    background-color transparent
-    border 1px solid #fff
+  &--primary
+    background $primary
     &:hover
-      border-color $primary - 15%
-      color #fff
+      background-color $primary - 15%
+  &--white
+    background-color #fff
+    color $main
+    &:hover
+      opacity .7
   &--full-size
     padding 2.2rem 3rem
     text-align center
     width 100%
-  &--dotted
-    background-color transparent
-    border 1px dashed rgba(#fff, .7)
-    &:hover
-      border-color $primary
-  &--big
-    font-size 1.6rem
-    font-weight 600
-    max-height initial
-    padding 2.5rem 4rem
-  &--small
-    padding 1.6rem 3.6rem
   & + .btn
     margin-left 2rem
 

@@ -13,13 +13,49 @@ block content
               li Индивидуальные занятия со школьниками 7-11 класс
               li Дистанционные уроки, максимально приближенные к очным занятиям
               li Отработанная система подготовки к экзаменам ЕГЭ, ОГЕ (ГИА)
-            .btn Записаться на занятия
+            .btn.btn--primary Записаться на занятия
+            .btn.btn--white Пройти тест
           .egor
             //- img(src="./img/egor.png", alt="")
+    .hero__socials
+      a(href="")
+    .hero__bottom
+      .mouse
+        img(src="./img/mouse.svg", alt="").mouse__img
+        span.mouse__word Скрольте вниз
   
-  section.section.for-who
+  section.section.services
     .grid.grid--container
-      h2.h2 Для кого подойдут занятия с репетитором?
+      h2.h2 Услуги
+      .row
+        .col.col--lg-4
+          .service
+            .service__img
+              img(src="./img/books.jpg", alt="")
+            .service__title Подготовка к профильному ЕГЭ по математике
+            .service__prices
+              .service__price 60 минут — 800 руб.
+              .service__price 90 минут — 1 200 руб.
+              .service__price 120 минут — 1 400 руб.
+        .col.col--lg-4
+          .service
+            .service__img
+              img(src="./img/books.jpg", alt="")
+            .service__title Подготовка к ОГЭ и базовому ЕГЭ
+            .service__prices
+              .service__price 60 минут — 800 руб.
+              .service__price 90 минут — 1 200 руб.
+              .service__price 120 минут — 1 400 руб.
+        .col.col--lg-4
+          .service
+            .service__img
+              img(src="./img/books.jpg", alt="")
+            .service__title Повышение успеваемости
+            .service__prices
+              .service__price 60 минут — 800 руб.
+              .service__price 90 минут — 1 200 руб.
+              .service__price 120 минут — 1 400 руб.
+
 
   section.section.about
     .about__img.anim-slide

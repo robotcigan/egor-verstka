@@ -13,8 +13,8 @@ $(document).ready(function() {
   // Special box
   let tween = TweenMax.to(".anim-slide__box", duration, {
     ease: Power4.easeInOut,
-    width: '0',
-    delay: .5
+    width: '0'
+    // delay: .2
   });
   let scene = new ScrollMagic.Scene({
     triggerElement: '.about',
