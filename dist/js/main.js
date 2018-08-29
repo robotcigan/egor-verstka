@@ -2,32 +2,54 @@
 
 $(document).ready(function () {
 
-  $('.anim-slide').each(function () {
-    console.log('some');
-    // $(this).insertAfter(".anim-slide__box");
-    $('.anim-slide').append('<div class="anim-slide__box"></div>');
+  // SVG magic
+  jQuery('img.svg').each(function () {
+    var $img = jQuery(this);
+    var imgID = $img.attr('id');
+    var imgClass = $img.attr('class');
+    var imgURL = $img.attr('src');
+    jQuery.get(imgURL, function (data) {
+      // Get the SVG tag, ignore the rest
+      var $svg = jQuery(data).find('svg');
+      // Add replaced image's ID to the new SVG
+      if (typeof imgID !== 'undefined') {
+        $svg = $svg.attr('id', imgID);
+      }
+      // Add replaced image's classes to the new SVG
+      if (typeof imgClass !== 'undefined') {
+        $svg = $svg.attr('class', imgClass + ' replaced-svg');
+      }
+      // Remove any invalid XML tags as per http://validator.w3.org
+      $svg = $svg.removeAttr('xmlns:a');
+      // Replace image with new SVG
+      $img.replaceWith($svg);
+    }, 'xml');
   });
 
+  // Animations
+  var duration = 1;
   var controller = new ScrollMagic.Controller();
 
-  var duration = 1;
+  $('.anim-slide').each(function () {
 
-  // Special box
-  var tween = TweenMax.to(".anim-slide__box", duration, {
-    ease: Power4.easeInOut,
-    width: '0'
-    // delay: .2
+    $(this).append('<div class="anim-slide__box"></div>');
+
+    var tween = new TimelineMax().to('.anim-slide__box', duration, {
+      ease: Power4.easeInOut,
+      width: '0'
+    }).to('.service__line', duration, {
+      ease: Power4.easeInOut,
+      width: '100%'
+      // delay: 0.1
+    }).to('.insta__icon', duration, {
+      ease: Power4.easeInOut,
+      opacity: 1
+    });
+
+    var scene = new ScrollMagic.Scene({
+      triggerElement: this,
+      reverse: false
+    }).setTween(tween) // trigger a TweenMax tween
+    .addTo(controller);
   });
-  var scene = new ScrollMagic.Scene({
-    triggerElement: '.about',
-    reverse: false
-  }).setTween(tween).addTo(controller);
-  // .setTween('.anim-slide__box', duration, {
-  //   ease: Power4.easeInOut,
-  //   width: '0'
-  // })
-  // TweenMax.to(".anim-slide__box", duration, {
-  //   ease: Power4.easeInOut,
-  //   width: '0'
-  // });
 });

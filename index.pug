@@ -26,31 +26,33 @@ block content
   
   section.section.services
     .grid.grid--container
-      h2.h2 Услуги
       .row
         .col.col--lg-4
           .service
-            .service__img
+            .service__img.anim-slide
               img(src="./img/books.jpg", alt="")
             .service__title Подготовка к профильному ЕГЭ по математике
+            .service__line
             .service__prices
               .service__price 60 минут — 800 руб.
               .service__price 90 минут — 1 200 руб.
               .service__price 120 минут — 1 400 руб.
         .col.col--lg-4
           .service
-            .service__img
+            .service__img.anim-slide
               img(src="./img/books.jpg", alt="")
             .service__title Подготовка к ОГЭ и базовому ЕГЭ
+            .service__line
             .service__prices
               .service__price 60 минут — 800 руб.
               .service__price 90 минут — 1 200 руб.
               .service__price 120 минут — 1 400 руб.
         .col.col--lg-4
           .service
-            .service__img
+            .service__img.anim-slide
               img(src="./img/books.jpg", alt="")
             .service__title Повышение успеваемости
+            .service__line
             .service__prices
               .service__price 60 минут — 800 руб.
               .service__price 90 минут — 1 200 руб.
@@ -83,9 +85,17 @@ block content
     .grid.grid--container
       h2.h2 Отзывы довольных клиентов
 
-  section.section
+  section.section.insta
     .grid.grid--container
       h2.h2 Инстаграм
+      .row
+        - for (var i = 1; i < 5; i++)
+          .col.col--lg-3
+            .insta__img.anim-slide
+              img(src="./img/insta/" + i + ".jpg", alt="")
+              .insta__icon
+                img(src="./img/insta.svg").svg
+
 
 
 
