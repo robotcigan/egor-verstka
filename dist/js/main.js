@@ -52,4 +52,29 @@ $(document).ready(function () {
     }).setTween(tween) // trigger a TweenMax tween
     .addTo(controller);
   });
+
+  // Text blast
+  $('.h2').addClass('h2--hidden');
+
+  $('.h2').each(function () {
+
+    new ScrollMagic.Scene({
+      triggerElement: this
+    }).on('start', function () {
+      var item = this.triggerElement();
+      $(item).removeClass('h2--hidden');
+      $(item).addClass('h2--visible');
+    }).addTo(controller);
+
+    $(this).blast({ delimiter: "word" });
+  });
+
+  // Services
+  // $('.service').on('mouseenter', function() {
+  //   let self = this;
+  //   TweenMax.to($(self).find('.service__img'), 1, {
+  //     webkitClipPath: 'inset(5%)',
+  //     clipPath: 'inset(5%)'
+  //   })
+  // })
 });

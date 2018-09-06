@@ -986,6 +986,42 @@ p {
 .section {
   margin-bottom: 15rem;
 }
+.h2 {
+  line-height: 1.2;
+  overflow: hidden;
+}
+.h2 .blast {
+  display: inline-block;
+  transition: all 0.5s;
+  -ms-transform: translateY(40px);
+  transform: translateY(40px);
+}
+.h2 .blast:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.h2 .blast:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.h2 .blast:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.h2 .blast:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.h2 .blast:nth-child(5) {
+  transition-delay: 0.5s;
+}
+.h2 .blast:nth-child(6) {
+  transition-delay: 0.6s;
+}
+.h2--hidden .blast {
+  opacity: 0;
+}
+.h2--visible .blast {
+  opacity: 1;
+  -ms-transform: none;
+  transform: none;
+}
 .services .service__img {
   display: block;
   margin-bottom: 2.4rem;
